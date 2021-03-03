@@ -2,7 +2,7 @@
 
 namespace App\src\model;
 
-class Comment
+class User
 {
     /**
      * @var int
@@ -17,7 +17,7 @@ class Comment
     /**
      * @var string
      */
-    private $content;
+    private $password;
 
     /**
      * @var \DateTime
@@ -25,14 +25,8 @@ class Comment
     private $createdAt;
 
     /**
-     * @var bool
-     */
-    private $flag;
-
-    /**
      * @return int
      */
-
     public function getId()
     {
         return $this->id;
@@ -65,17 +59,17 @@ class Comment
     /**
      * @return string
      */
-    public function getContent()
+    public function getPassword()
     {
-        return $this->content;
+        return $this->password;
     }
 
     /**
-     * @param string $content
+     * @param string $password
      */
-    public function setContent($content)
+    public function setPassword($password)
     {
-        $this->content = $content;
+        $this->password = $password;
     }
 
     /**
@@ -92,21 +86,5 @@ class Comment
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isFlag()
-    {
-        return $this->flag;
-    }
-
-    /**
-     * @param bool $flag
-     */
-    public function setFlag($flag)
-    {
-        $this->flag = $flag;
     }
 }
