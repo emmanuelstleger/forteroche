@@ -1,40 +1,43 @@
 <?php $this->title = 'Accueil'; ?>
 
-    <h1>Mon blog</h1>
-    <p>En construction</p>
-<?= $this->session->show('add_comment'); ?>
-<?= $this->session->show('flag_comment'); ?>
-<?= $this->session->show('delete_comment'); ?>
-<?= $this->session->show('register'); ?>
-<?= $this->session->show('login'); ?>
-<?= $this->session->show('logout'); ?>
-<?= $this->session->show('delete_account'); ?>
-<?php
-if ($this->session->get('pseudo')) {
-    ?>
-    <a href="../public/index.php?route=logout">Déconnexion</a>
-    <a href="../public/index.php?route=profile">Profil</a>
-    <?php if($this->session->get('role') === 'admin') { ?>
-        <a href="../public/index.php?route=administration">Administration</a>
-    <?php }}
-else {
-    ?>
-    <a href="../public/index.php?route=register">Inscription</a>
-    <a href="../public/index.php?route=login">Connexion</a>
-    <?php
-}
-?>
-<?php
-foreach ($articles as $article)
-{
-    ?>
-    <div>
-        <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
-        <p><?= htmlspecialchars($article->getContent());?></p>
-        <p><?= htmlspecialchars($article->getAuthor());?></p>
-        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+<!-- Alert messages -->
+<div class="container">
+    <div class="row">
+        <div class="col mx-auto my-3">
+            <div class="bg-info text-center mb-5">
+                <?= $this->session->show('add_comment'); ?>
+                <?= $this->session->show('flag_comment'); ?>
+                <?= $this->session->show('delete_comment'); ?>
+                <?= $this->session->show('register'); ?>
+                <?= $this->session->show('login'); ?>
+                <?= $this->session->show('logout'); ?>
+                <?= $this->session->show('delete_account'); ?>
+            </div>
+        </div>
     </div>
-    <br>
-    <?php
-}
-?>
+</div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col mx-auto">
+            <?php
+            foreach ($articles as $article)
+            {
+                ?>
+          <div class="post-preview">
+              <h2 class="post-title"><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a>
+              </h2>
+              <p class="post-subtitle"><?= htmlspecialchars($article->getContent());?></p>
+              <p class="font-italic">Écrit par <?= htmlspecialchars($article->getAuthor());?></p>
+              <p class="font-italic">Publié le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+              <hr class="mb-5">
+          </div>
+                <?php
+            }
+            ?>
+
+    </div>
+  </div>
+
+
