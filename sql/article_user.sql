@@ -1,3 +1,5 @@
+<!-- adding user id column to article table -->
+
 ALTER TABLE `article`
     DROP COLUMN `author`;
 

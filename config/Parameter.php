@@ -1,6 +1,8 @@
 <?php
 namespace App\config;
 
+// creation of parameter class
+
 class Parameter
 {
     private $parameter;

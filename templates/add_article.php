@@ -1,4 +1,6 @@
 <?php $this->title="Nouvel article"; ?>
+
+<!-- Add an article template -->
 <div class="container">
     <div class="row">
         <div class="col">

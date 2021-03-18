@@ -1,3 +1,5 @@
+<!-- creation of table user -->
+
 CREATE TABLE `user` (
                         `id` int(11) NOT NULL,
                         `pseudo` varchar(100) NOT NULL,

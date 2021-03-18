@@ -1,3 +1,5 @@
+<!-- creation of user role table -->
+
 CREATE TABLE `role` (
     `id` int(11) NOT NULL,
     `name` varchar(15) NOT NULL
@@ -14,13 +16,10 @@ ALTER TABLE `role`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
-/* mise en place de la clé étrangère de la table user
+<!-- >set up of a foreign key on user table -->
 
  ALTER TABLE `user`
     ADD COLUMN `role_id` int(11) NOT NULL;
 
 ALTER TABLE `user`
     ADD CONSTRAINT `fk_role_id` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
-
-
- */

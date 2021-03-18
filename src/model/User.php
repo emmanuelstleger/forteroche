@@ -2,6 +2,8 @@
 
 namespace App\src\model;
 
+//definition of user class parameters
+
 class User
 {
     /**

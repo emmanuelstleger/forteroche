@@ -3,6 +3,8 @@
 namespace App\src\constraint;
 use App\config\Parameter;
 
+//setting constraint rules for users
+
 class UserValidation extends Validation
 {
     private $errors = [];

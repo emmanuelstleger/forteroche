@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                     <h2><?=htmlspecialchars($article->getTitle());?></h2>
-                    <p><?= $article->getContent();?></p>
+                    <p><?=html_entity_decode(htmlspecialchars($article->getContent()));?></p>
                     <p class="font-italic">Écrit par <?=htmlspecialchars($article->getAuthor());?></p>
                     <p class="font-italic">Publié le : <?=htmlspecialchars($article->getCreatedAt());?></p>
             </div>

@@ -1,6 +1,8 @@
 <?php
 namespace App\src\controller;
 
+//creation of error controller to handle errors
+
 class ErrorController extends Controller
 {
     public function errorNotFound()

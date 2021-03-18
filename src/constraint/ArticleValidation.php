@@ -3,6 +3,8 @@
 namespace App\src\constraint;
 use App\config\Parameter;
 
+//setting constraint rules for articles
+
 class ArticleValidation extends Validation
 {
     private $errors = [];

@@ -3,6 +3,8 @@
 namespace App\src\constraint;
 use App\config\Parameter;
 
+//setting constraint rules for comments
+
 class CommentValidation extends Validation
 {
     private $errors = [];

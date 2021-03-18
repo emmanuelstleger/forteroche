@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+// creation of session class which is an additional parameter
+
 class Session
 {
     private $session;

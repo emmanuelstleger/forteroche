@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+// creation of class request with variables get, post and session
+
 class Request
 {
     private $get;

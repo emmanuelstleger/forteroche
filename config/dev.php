@@ -1,3 +1,5 @@
+<!-- database information for development -->
+
 <?php
 
 const HOST = 'localhost';

@@ -4,6 +4,8 @@ namespace App\src\controller;
 
 use App\config\Parameter;
 
+// creation of back controller to handle functionalities only accessible to ADMIN user (administration page)
+
 class BackController extends Controller
 {
     private function checkLoggedIn()

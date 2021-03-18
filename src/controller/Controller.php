@@ -9,6 +9,7 @@ use App\src\DAO\CommentDAO;
 use App\src\DAO\UserDAO;
 use App\src\model\View;
 
+//class Controller to avoid code repetition
 
 abstract class Controller
 {

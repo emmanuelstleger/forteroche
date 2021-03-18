@@ -4,6 +4,8 @@ namespace App\src\DAO;
 use App\config\Parameter;
 use App\src\model\Article;
 
+// creation of articledao class to access articles information in the Database
+
 class ArticleDAO extends DAO
 {
     private function buildObject($row)

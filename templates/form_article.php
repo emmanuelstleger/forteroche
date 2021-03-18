@@ -3,9 +3,17 @@ $route = isset($post) && $post->get('id') ? 'editArticle&articleId='.$post->get(
 $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
 ?>
 
+<!-- initialization script of tinyMCE -->
+
 <script>
     tinymce.init({
-        selector: '#mytextarea'
+        selector: '#mytextarea',
+        entity_encoding : 'raw',
+        encoding: 'UTF-8',
+        language : 'fr_FR',
+        forced_root_block : false,
+        force_br_newlines : true,
+        force_p_newlines : false
     });
 </script>
 

@@ -4,6 +4,8 @@ namespace App\src\model;
 
 use App\config\Request;
 
+//definition of view class to handle the view management
+
 class View
 {
     private $file;

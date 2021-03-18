@@ -42,7 +42,7 @@
                     <tr>
                         <th scope="row"><?= htmlspecialchars($article->getId()); ?></th>
                         <td><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></td>
-                        <td><?= substr(htmlspecialchars($article->getContent()),0,70);?></td>
+                        <td><?= substr(htmlspecialchars(strip_tags($article->getContent())),0,70);?></td>
                         <td><?= htmlspecialchars($article->getAuthor()); ?></td>
                         <td><?= htmlspecialchars($article->getCreatedAt());?></td>
                         <td>

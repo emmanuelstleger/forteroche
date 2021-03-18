@@ -6,6 +6,8 @@ use App\src\controller\FrontController;
 use App\src\controller\ErrorController;
 use Exception;
 
+// creation of router class and configuration
+
 class Router
 {
     private $frontController;

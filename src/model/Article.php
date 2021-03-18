@@ -2,6 +2,8 @@
 
 namespace App\src\model;
 
+//definition of article class parameters
+
 class Article
 {
     /**

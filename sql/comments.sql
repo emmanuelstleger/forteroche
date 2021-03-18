@@ -1,3 +1,4 @@
+<!-- creation of comment table -->
 
 CREATE TABLE `comment` (
    `id` int(11) NOT NULL,

@@ -4,6 +4,8 @@ namespace App\src\DAO;
 use App\config\Parameter;
 use App\src\model\Comment;
 
+// creation of commentdao class to access all the comments information in the database
+
 class CommentDAO extends DAO
 {
     private function buildObject($row)

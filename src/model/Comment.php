@@ -2,6 +2,8 @@
 
 namespace App\src\model;
 
+//definition of comment class parameters
+
 class Comment
 {
     /**

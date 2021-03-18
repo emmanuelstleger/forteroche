@@ -1,3 +1,5 @@
+<!-- creation of article table -->
+
 CREATE TABLE `article` (
 
 `id` int(11) NOT NULL,

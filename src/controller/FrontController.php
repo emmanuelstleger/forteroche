@@ -3,6 +3,8 @@ namespace App\src\controller;
 
 use App\config\Parameter;
 
+// creation of Front controller to handle functionalities accessible to ALL users
+
 class FrontController extends Controller
 {
     public function home()

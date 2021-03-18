@@ -28,7 +28,7 @@
           <div class="post-preview">
               <h2 class="post-title"><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a>
               </h2>
-              <p class="post-subtitle"><?= htmlspecialchars($article->getContent());?></p>
+              <p class="post-subtitle"><?= nl2br(substr(htmlspecialchars(strip_tags($article->getContent())), 0, 150));?></p>
               <p class="font-italic">Écrit par <?= htmlspecialchars($article->getAuthor());?></p>
               <p class="font-italic">Publié le : <?= htmlspecialchars($article->getCreatedAt());?></p>
               <hr class="mb-5">
