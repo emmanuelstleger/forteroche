@@ -16,7 +16,13 @@
             <h4>Voici les options qui s'offrent à vous :</h4>
             <ul>
                 <li><a href="../public/index.php?route=updatePassword">Modifier mon mot de passe</a>
-                <li><a href="../public/index.php?route=deleteAccount">Supprimer mon compte</a>
+                <?php
+                if ($this->session->get('role') === 'user') {
+                    ?>
+                    <li><a href="../public/index.php?route=deleteAccount">Supprimer mon compte</a>
+                <?php
+                }
+                ?>
                 <li><a href="../public/index.php">Revenir à l'accueil</a>
             </ul>
         </div>

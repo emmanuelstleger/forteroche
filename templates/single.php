@@ -20,15 +20,20 @@
 <div class="container" id="comments">
     <div class="row">
         <div class="col-12">
+        <?php
+        if ($this->session->get('role') === 'user') {
+        ?>
             <h3 class="my-3">Ajouter un commentaire</h3>
             <?php include('form_comment.php'); ?>
             <hr>
+        <?php
+        }
+        ?>
         </div>
-
+    </div>
         <!-- list of all comments -->
         <div class="row">
             <div class="col">
-
                 <h3 class="my-5">Commentaires</h3>
                 <?php
                 foreach($comments as $comment)
@@ -47,13 +52,14 @@
                         <p><a href="../public/index.php?route=flagComment&commentId=<?= $comment->getId(); ?>">Signaler le commentaire</a></p>
                         <?php
                     }
-                    ?>
-                    <p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p>
-                    <br>
+                    if ($this->session->get('role') === 'admin') {
+                        ?>
+                         <p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p>
+                         <br>
                     <?php
-                }
+                    }}
                 ?>
             </div>
-    </div>
+        </div>
 </div>
 
